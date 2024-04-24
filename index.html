@@ -5,6 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cloud IA 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -44,19 +75,19 @@
         https://gitlab.com/nanuchi/developing-with-docker.git<br> Once cloned, navigate to the directory where the
         project has been downloaded. Open a terminal window and change the directory to the one where the project was
         cloned.
-        <img src="../assets/lib/image-2.png" alt="img">
-        <img src="../assets/lib/image-1.png" alt="img2">
-        <img src="../assets/lib/image-3.png" alt="img3">
+        <img src="./assets/lib/image-2.png" alt="img">
+        <img src="./assets/lib/image-1.png" alt="img2">
+        <img src="./assets/lib/image-3.png" alt="img3">
     </p>
 
     <p><strong>Step 2:</strong> Create a Docker Network <br> Create a Docker network to ensure container isolation.
         This will help in managing communication between containers.
-        <img src="../assets/lib/image-4.png" alt="img4">
-        <img src="../assets/lib/image-5.png" alt="img5">
+        <img src="./assets/lib/image-4.png" alt="img4">
+        <img src="./assets/lib/image-5.png" alt="img5">
     </p>
 
     <p><strong>Step 3:</strong> Run the Database Container<br> Run the MongoDB container with the following command:
-        <img src="../assets/lib/image-6.png" alt="img6">
+        <img src="./assets/lib/image-6.png" alt="img6">
         <br> - Creates a detached MongoDB container. - Connects it to a specified Docker network. - Maps host port 27017
         to container port 27017 for MongoDB client connections. - Sets the MongoDB root username to "admin" and password
         to "password". - Uses the official MongoDB Docker image.
@@ -64,21 +95,21 @@
 
     <p><strong>Step 4:</strong> Run the mongo-express Server<br> Run the mongo-express server container using the
         following command:
-        <img src="../assets/lib/image-7.png" alt="img7">
-        <img src="../assets/lib/image-8.png" alt="img8"> Access the mongo-express interface by navigating to
+        <img src="./assets/lib/image-7.png" alt="img7">
+        <img src="./assets/lib/image-8.png" alt="img8"> Access the mongo-express interface by navigating to
         http://localhost:8081 in a web browser.<br> You will be prompted to enter the username and password. Use the
         provided credentials: username - admin, password - pass.<br> Once logged in, you will be able to see the
         mongo-express dashboard.<br>
-        <img src="../assets/lib/image-9.png" alt="img9">
-        <img src="../assets/lib/image-10.png" alt="img10">
-        <img src="../assets/lib/image-11.png" alt="img11">
-        <img src="../assets/lib/image-12.png" alt="img12">
+        <img src="./assets/lib/image-9.png" alt="img9">
+        <img src="./assets/lib/image-10.png" alt="img10">
+        <img src="./assets/lib/image-11.png" alt="img11">
+        <img src="./assets/lib/image-12.png" alt="img12">
     </p>
 
     <p><strong>Step 5:</strong> Create Docker Image for the Application<br> Navigate to the 'app' folder of the project
         and create a Dockerfile. Add the below instructions to the Dockerfile for building the Docker image for the
         application.
-        <img src="../assets/lib/image-13.png" alt="img13">
+        <img src="./assets/lib/image-13.png" alt="img13">
         - <strong>FROM node:</strong> This line specifies the base image to use for building the Docker image. In this
         case, it uses the official Node.js image from Docker Hub.<br> - <strong>WORKDIR /app:</strong> This sets the
         working directory inside the container to /app. It means that any subsequent commands will be executed from
@@ -96,22 +127,22 @@
         "server.js" ]</strong> : This specifies the command to run when the container starts. It runs the Node.js
         application by executing node server.js. This assumes that server.js is the entry point file for the Node.js
         application.
-        <img src="../assets/lib/image-14.png" alt="img14">
-        <img src="../assets/lib/image-15.png" alt="img15">
+        <img src="./assets/lib/image-14.png" alt="img14">
+        <img src="./assets/lib/image-15.png" alt="img15">
     </p>
 
     <p><strong>Step 6:</strong> Update server.js and Build Docker Image<br> Make the necessary changes to the
         'server.js' file to replace occurrences of 'localhost' with the name of the MongoDB container.<br> Once the
         changes are made, build the Docker image using the provided Dockerfile and run the container with the following
         command:<br>
-        <img src="../assets/lib/image-16.png" alt="img16">
-        <img src="../assets/lib/image-17.png" alt="img17">
-        <img src="../assets/lib/image-18.png" alt="img18">
-        <img src="../assets/lib/image-19.png" alt="img19">
+        <img src="./assets/lib/image-16.png" alt="img16">
+        <img src="./assets/lib/image-17.png" alt="img17">
+        <img src="./assets/lib/image-18.png" alt="img18">
+        <img src="./assets/lib/image-19.png" alt="img19">
     </p>
 
     <p>Upon successful execution, you can access the website at http://localhost:3000 and interact with it. <br>
-        <img src="../assets/lib/image.png" alt="img20">
+        <img src="./assets/lib/image.png" alt="img20">
     </p>
 
 </body>
